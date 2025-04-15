@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugWise AI - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Bug<span class="gradient-text">Wise</span> AI</h1>
+            </div>
+        </header>
+        
+        <main>
+            <div class="auth-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+
+                <div id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <p>Login to manage your bug tracking efficiently</p>
+
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text", id="login-username" placeholder="Enter your username">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="login-password" placeholder="Enter your password">
+                        </div>
+                    </div>
+
+                    <div class="error-message" id="login-error"></div>
+
+                    <button id="login-btn" class="btn primary-btn">
+                        <span>Login</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div id="register-form" class="auth-form">
+                    <h2>Create Account</h2>
+                    <p>Join BugWise AI to start tracking bugs efficiently</p>
+
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="register-username" placeholder="Choose a username">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <div class="input-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="register-email" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="register-password" placeholder="Create a password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-role">Role</label>
+                        <div class="input-group">
+                            <i class="fas fa-user-tag"></i>
+                            <select id="register-role">
+                                <option value="viewer">Viewer</option>
+                                <option value="developer">Developer</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="error-message" id="register-error"></div>
+
+                    <button id="register-btn" class="btn primary-btn">
+                        <span>Register</span>
+                        <i class="fas fa-user-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>
